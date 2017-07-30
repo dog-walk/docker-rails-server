@@ -10,17 +10,18 @@ This container is made with:
 
 ## How to use
 
-1.Create Dockerfile in your application folder
-2.Add the following line to your Dockerfile:
+1. Create Dockerfile in your application folder
+
+2. Add the following line to your Dockerfile:
 
 `FROM kozhin/rails-server:latest`
 
-3.Build your application images with
+3. Build your application images with
 
 `docker build -t YOUR_IMAGE_NAME .`
 
-4.Run your application inside Docker container
+4. Run your application inside Docker container
 
 `docker run -p 3000:3000 -v YOUR_APP_ABS_PATH:/app -d YOUR_IMAGE_NAME`
 
-5.Open <http://127.0.0.1:3000>
+5. Open <http://127.0.0.1:3000>
