@@ -16,6 +16,8 @@ This container is made with:
 
 3. Build your application image with: `docker build -t YOUR_IMAGE_NAME .`
 
-4. Run your application inside Docker container: `docker run -p 3000:3000 -v YOUR_APP_ABSOLUTE_PATH:/app -d YOUR_IMAGE_NAME`
+4. Run your application inside Docker container:
+
+`docker run -p 3000:3000 -v YOUR_APP_ABSOLUTE_PATH:/app -d YOUR_IMAGE_NAME`
 
 5. Open <http://127.0.0.1:3000>
