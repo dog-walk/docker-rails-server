@@ -2,8 +2,6 @@
 
 Use this Dockerfile to build your own images to run Ruby on Rails applications in development mode. Pre-built images you may find at <https://hub.docker.com/r/kozhin/rails-server/tags/> (279 Mb).
 
-Setting RUBY_VERSION environment variable allows to install specific version of Ruby language.
-
 This container is made with:
 
 - Ruby on Rails image for Docker (<https://hub.docker.com/r/kozhin/rails/tags/>)
