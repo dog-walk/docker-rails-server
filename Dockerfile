@@ -7,11 +7,13 @@ LABEL Description="This image runs Ruby on Rails server for development" Vendor=
 
 # Create and set application folder
 RUN mkdir -p /app
+
+# Set working directory
 WORKDIR /app
 
 # Prepare to build gems
-ONBUILD COPY Gemfile /app/
-ONBUILD COPY Gemfile.lock /app/
+ONBUILD COPY Gemfile ./
+ONBUILD COPY Gemfile.lock ./
 
 # Update bash and install Rails application gems
 ONBUILD RUN bash -c "source ~/.bash_profile \
@@ -25,3 +27,4 @@ EXPOSE 3000
 
 # Define entrypoint
 ENTRYPOINT bash -c "source ~/.bash_profile && rails server -b 0.0.0.0 -p 3000"
+
