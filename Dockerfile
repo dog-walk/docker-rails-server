@@ -11,14 +11,6 @@ RUN mkdir -p /app
 # Set working directory
 WORKDIR /app
 
-# Prepare to build gems
-ONBUILD COPY Gemfile ./
-ONBUILD COPY Gemfile.lock ./
-
-# Update bash and install Rails application gems
-ONBUILD RUN bash -c "source ~/.bash_profile \
-&& bundle install"
-
 # Set up volume share
 VOLUME ["/app"]
 
@@ -27,4 +19,3 @@ EXPOSE 3000
 
 # Define entrypoint
 ENTRYPOINT bash -c "source ~/.bash_profile && rails server -b 0.0.0.0 -p 3000"
-
