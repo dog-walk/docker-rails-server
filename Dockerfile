@@ -18,4 +18,4 @@ VOLUME ["/app"]
 EXPOSE 3000
 
 # Define entrypoint
-ENTRYPOINT bash -c "source ~/.bash_profile && rails server -b 0.0.0.0 -p 3000"
+ENTRYPOINT bash -c "source ~/.bash_profile && rails server"
