@@ -2,8 +2,10 @@
 FROM kozhin/rails:latest
 
 # Set maintainer and image indo
-MAINTAINER Konstantin Kozhin <konstantin@profitco.ru>
-LABEL Description="This image runs Ruby on Rails server for development" Vendor="ProfitCo" Version="1.0"
+LABEL Description="This image runs Ruby on Rails server for development" \
+      Vendor="CodedRed" \
+      Version="1.0" \
+      Maintainer="Konstantin Kozhin <konstantin@codedred.com>"
 
 # Create and set application folder
 RUN mkdir -p /app
